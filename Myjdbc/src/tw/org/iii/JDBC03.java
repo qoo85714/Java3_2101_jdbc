@@ -9,12 +9,12 @@ import java.util.Properties;
 public class JDBC03 {
 
 	public static void main(String[] args) {
-		try{Class.forName("com.mysql.jdbc.Driver");
-			System.out.println("OK");
-		}catch(ClassNotFoundException ee){
-			System.out.println(ee);	
-			System.exit(-1);
-		}
+//		try{Class.forName("com.mysql.jdbc.Driver");
+//			System.out.println("OK");
+//		}catch(ClassNotFoundException ee){
+//			System.out.println(ee);	
+//			System.exit(-1);
+//		}
 		try {
 			Properties prop = new Properties();
 			prop.setProperty("user", "root");
