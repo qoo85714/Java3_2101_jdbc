@@ -14,7 +14,7 @@ import java.util.Properties;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class GiftExample {
+public class GiftExample2 {
 
 	public static void main(String[] args) {
 		long start = System.currentTimeMillis();
@@ -57,10 +57,12 @@ public class GiftExample {
 				pstmt.setString(7, OrderUrl);
 				pstmt.setString(8, ContactTel);
 				pstmt.setString(9, Column1);
-				pstmt.execute();
+				pstmt.addBatch();
 			}
+			pstmt.executeBatch();
 			System.out.println("OK");
 			System.out.println(System.currentTimeMillis()-start);
+			
 		}catch(Exception e){
 			System.out.println(e);
 		}
